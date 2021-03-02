@@ -1,0 +1,33 @@
+.site-card {
+  border: white 2px solid;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.site-card-header {
+  font-weight: 600;
+  color: orange;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: orange 1px solid;
+}
+
+.small-card {
+  max-width: 25em;
+  width: 100%;
+}
+
+.medium-card {
+  max-width: 35em;
+  width: 100%;
+}
+
+.large-card {
+  max-width: 45em;
+  width: 100%;
+}

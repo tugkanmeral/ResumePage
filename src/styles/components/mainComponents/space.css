@@ -1,0 +1,14 @@
+.sm-space {
+    width: 5px;
+    height: 5px;
+}
+
+.md-space {
+    width: 10px;
+    height: 10;
+}
+
+.lg-space {
+    width: 15px;
+    height: 15px;
+}

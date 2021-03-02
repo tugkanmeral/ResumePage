@@ -1,0 +1,55 @@
+{
+  "ownerInfos": {
+    "fullName": "M.Tuğkan Meral",
+    "title": "Yazılım Geliştirme Uzmanı",
+    "company": "Logo Yazılım",
+    "companyLink": "https://www.logo.com.tr/",
+    "description": "1992 Üsküdar doğumlu, Yıldız Teknik Fizik mezunu, hayvan sever, motosiklet sevdalısı, bir şeyleri yapıp bozmaya sonra tekrar yapmaya bayılan, doğayı anlamaya çalışan, özünde sabit kalıp düşünceleriyle değişen, gelişen, kendi halinde bir insan...",
+    "linkedin": "https://tr.linkedin.com/in/m-tu%C4%9Fkan-meral-4563a81a1",
+    "medium": "https://tugkanmeral.medium.com",
+    "twitter": "https://twitter.com/tugkanmeral",
+    "instagram": "https://www.instagram.com/tugkanmeral",
+    "email": "tugkan.mrl@gmail.com"
+  },
+  "jobExperiences": [
+    {
+      "name": "Tim Danışmanlık",
+      "title": "full stack developer",
+      "projectExperiences" : [
+        {
+          "name": "Finansal Matematik Simülasyonu",
+          "detail": "Windows Form Application, MsSQL Server"
+        },
+        {
+          "name": "Mikro Öğrenme Platformu",
+          "detail": "Asp.NET Core MVC, MsSQL Server"
+        },
+        {
+          "name": "Tim Soru Bankası",
+          "detail": "React Native, Expo, Redux"
+        },
+        {
+          "name": "Yatırım Ürünleri Simülasyonu",
+          "detail": "Asp.NET Core Web API, ReactJS, MsSQL Server"
+        }
+      ]
+    },
+    {
+      "name": "Logo Yazılım",
+      "title": "software development specialist",
+      "projectExperiences" : [
+        {
+          "name": "B2B",
+          "detail": "Asp.NET Web API, Angular, MsSQL Server"
+        },
+        {
+          "name": "Hazine Yönetim Projesi",
+          "detail": "Asp.NET Web API, Angular, MsSQL Server"
+        },
+        {
+          "name": "Corework (framework)"
+        }
+      ]
+    }
+  ]
+}
