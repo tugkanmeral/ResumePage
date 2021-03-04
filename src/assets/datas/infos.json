@@ -17,20 +17,24 @@
       "title": "full stack developer",
       "projectExperiences" : [
         {
-          "name": "Finansal Matematik Simülasyonu",
-          "detail": "Windows Form Application, MsSQL Server"
+          "name": "Finansal Matematik Oyunu",
+          "tech": "Windows Form Application, MsSQL Server",
+          "detail": "Kapalı bir local ağ üzerinde, finansa dair matematiksel hesaplamaların öğretilmesini amaçlayan, oyunlaştırma içeren desktop uygulaması. Tamamı tarafımca yazıldı."
         },
         {
           "name": "Mikro Öğrenme Platformu",
-          "detail": "Asp.NET Core MVC, MsSQL Server"
+          "tech": "Asp.NET Core MVC, MsSQL Server",
+          "detail": "Tim Danışmanlık bünyesinde hazırlanmış mikro ders içeriklerinin gösterildiği, online sınavların yapılıp sonrasında raporlamaların çıkarıldığı web uygulaması. Back-end kodlarının tamamı tarafımca yazıldı."
         },
         {
           "name": "Tim Soru Bankası",
-          "detail": "React Native, Expo, Redux"
+          "tech": "React Native, Expo, Redux",
+          "detail": "Back-end'inde Mikto Öğrenme Platformunu tüketen, yalnızca online sınavların yapıldığı mobil uygulama. Tamamı tarafımca yazıldı."
         },
         {
           "name": "Yatırım Ürünleri Simülasyonu",
-          "detail": "Asp.NET Core Web API, ReactJS, MsSQL Server"
+          "tech": "Asp.NET Core Web API, ReactJS, MsSQL Server",
+          "detail": "Yatırım araçlarını örnek senaryolar ile öğretmeyi amaçlayan web uygulaması. Geliştirilmesinde destek sağlandı."
         }
       ]
     },
@@ -40,11 +44,11 @@
       "projectExperiences" : [
         {
           "name": "B2B",
-          "detail": "Asp.NET Web API, Angular, MsSQL Server"
+          "tech": "Asp.NET Web API, Angular, MsSQL Server"
         },
         {
           "name": "Hazine Yönetim Projesi",
-          "detail": "Asp.NET Web API, Angular, MsSQL Server"
+          "tech": "Asp.NET Web API, Angular, MsSQL Server"
         },
         {
           "name": "Corework (framework)"

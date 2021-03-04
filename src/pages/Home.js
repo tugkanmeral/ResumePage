@@ -3,7 +3,7 @@ import "../../src/styles/pages/home.css";
 import React, { Component } from "react";
 import { VContainer } from "../components/mainComponents/VContainer";
 import { Card } from "../components/mainComponents/Card";
-// import { ApiCaller } from "../service/ApiCaller";
+import { Tooltip } from 'primereact/tooltip';
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -35,7 +35,7 @@ export class Home extends Component {
 
   getExperience = async () => {
     // var response = await ApiCaller.Get("api/experience", null);
-    var data = require('../assets/datas/infos.json');
+    var data = require("../assets/datas/infos.json");
 
     console.info(data);
     this.setState({ experiences: data.jobExperiences });
@@ -43,9 +43,9 @@ export class Home extends Component {
 
   buildJobExperienceCards = () => {
     if (!this.state.experiences) return;
-    
+
     let cards = [];
-    
+
     for (let index = 0; index < this.state.experiences.length; index++) {
       const element = this.state.experiences[index];
       cards.push(
@@ -64,14 +64,15 @@ export class Home extends Component {
 
   buildExperienceProjectsList = (_list) => {
     if (!_list) return;
-    
+
     let projectExperiencesList = [];
     for (let index = 0; index < _list.length; index++) {
       const element = _list[index];
       projectExperiencesList.push(
         <div style={styles.projectContainer} key={index}>
-          <div style={styles.projectHeader}>{element.name}</div>
-          <div style={styles.detailHeader}>{element.detail}</div>
+          <Tooltip target=".tool-tip-element" mouseTrack mouseTrackLeft={10} />
+          <div style={styles.projectHeader} className={element.detail ? "tool-tip-element" : null} data-pr-tooltip={element.detail}>{element.name}</div>
+          <div style={styles.techHeader}>{element.tech}</div>
         </div>
       );
     }
@@ -96,12 +97,12 @@ const styles = {
     borderLeft: "2px solid rgb(3, 51, 74)",
     paddingLeft: "10px",
     marginBottom: "6px",
-    marginTop: "6px"
+    marginTop: "6px",
   },
   projectHeader: {
     fontWeight: 500,
   },
-  detailHeader: {
+  techHeader: {
     fontWeight: 400,
   },
 };

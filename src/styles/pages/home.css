@@ -16,3 +16,7 @@
     align-items: flex-start;
   }
 }
+
+.tool-tip-element {
+  cursor: context-menu;
+}
