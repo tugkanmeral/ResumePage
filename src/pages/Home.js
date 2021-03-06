@@ -3,7 +3,7 @@ import "../../src/styles/pages/home.css";
 import React, { Component } from "react";
 import { VContainer } from "../components/mainComponents/VContainer";
 import { Card } from "../components/mainComponents/Card";
-import { Tooltip } from 'primereact/tooltip';
+import { Tooltip } from "primereact/tooltip";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -12,11 +12,12 @@ export class Home extends Component {
     super(props);
     this.state = {
       experiences: null,
+      educations: null,
     };
   }
 
   componentDidMount() {
-    this.getExperience();
+    this.getInfos();
   }
 
   render() {
@@ -27,18 +28,26 @@ export class Home extends Component {
           {this.buildJobExperienceCards()}
         </VContainer>
         <VContainer style={styles.verticalContainerStyles}>
-          <h3 className="accent-color"></h3>
+          <h3 className="accent-color">Eğitim</h3>
+          {this.buildEducationCards()}
         </VContainer>
       </div>
     );
   }
 
-  getExperience = async () => {
-    // var response = await ApiCaller.Get("api/experience", null);
+  getInfos = () => {
     var data = require("../assets/datas/infos.json");
 
-    console.info(data);
-    this.setState({ experiences: data.jobExperiences });
+    this.getExperience(data.jobExperiences);
+    this.getEducation(data.educations);
+  };
+
+  getEducation = (_educations) => {
+    this.setState({ educations: _educations });
+  };
+
+  getExperience = async (_jobExperiences) => {
+    this.setState({ experiences: _jobExperiences });
   };
 
   buildJobExperienceCards = () => {
@@ -50,8 +59,8 @@ export class Home extends Component {
       const element = this.state.experiences[index];
       cards.push(
         <Card size="md" key={index}>
-          <div style={styles.companyContainer}>
-            <div style={styles.companyHeader}>{element.name}</div>
+          <div style={styles.mainContainer}>
+            <div style={styles.mainContainerHeader}>{element.name}</div>
             <small>{element.title}</small>
           </div>
           {this.buildExperienceProjectsList(element.projectExperiences)}
@@ -69,40 +78,70 @@ export class Home extends Component {
     for (let index = 0; index < _list.length; index++) {
       const element = _list[index];
       projectExperiencesList.push(
-        <div style={styles.projectContainer} key={index}>
+        <div style={styles.subContainer} key={index}>
           <Tooltip target=".tool-tip-element" mouseTrack mouseTrackLeft={10} />
-          <div style={styles.projectHeader} className={element.detail ? "tool-tip-element" : null} data-pr-tooltip={element.detail}>{element.name}</div>
-          <div style={styles.techHeader}>{element.tech}</div>
+          <div
+            style={styles.subContainerHeader}
+            className={element.detail ? "tool-tip-element" : null}
+            data-pr-tooltip={element.detail}
+          >
+            {element.name}
+          </div>
+          <div style={styles.subContainerText}>{element.tech}</div>
         </div>
       );
     }
 
     return projectExperiencesList;
   };
+
+  buildEducationCards = () => {
+    if (!this.state.educations) return;
+
+    let educations = [];
+    for (let index = 0; index < this.state.educations.length; index++) {
+      const element = this.state.educations[index];
+      educations.push(
+        <Card size="md" key={index}>
+          <div style={styles.subContainer}>
+            <div style={styles.subContainerHeader}>{element.school}</div>
+            <div style={styles.subContainerText}>
+              {element.start}{" "}
+              {element.end != null ? " - " + element.end : "Devam ediyor"}
+            </div>
+            <div style={styles.subContainerText}>{element.type}</div>
+            <div style={styles.subContainerText}>{element.department}</div>
+          </div>
+        </Card>
+      );
+    }
+
+    return educations;
+  };
 }
 
 const styles = {
-  companyContainer: {
+  mainContainer: {
     marginBottom: "10px",
   },
   verticalContainerStyles: {
     flex: 1,
     alignItems: "center",
   },
-  companyHeader: {
+  mainContainerHeader: {
     fontWeight: 700,
     color: "rgb(3, 51, 74)",
   },
-  projectContainer: {
+  subContainer: {
     borderLeft: "2px solid rgb(3, 51, 74)",
     paddingLeft: "10px",
     marginBottom: "6px",
     marginTop: "6px",
   },
-  projectHeader: {
+  subContainerHeader: {
     fontWeight: 500,
   },
-  techHeader: {
+  subContainerText: {
     fontWeight: 400,
   },
 };
