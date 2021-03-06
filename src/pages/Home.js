@@ -60,7 +60,7 @@ export class Home extends Component {
       cards.push(
         <Card size="md" key={index}>
           <div style={styles.mainContainer}>
-            <div style={styles.mainContainerHeader}>{element.name}</div>
+            <div style={styles.mainContainerHeader}>{element.name} <small>{element.start != null ? "("+element.start : null}{element.end != null ? " - " + element.end + ")" : " - devam ediyor)"}</small></div>
             <small>{element.title}</small>
           </div>
           {this.buildExperienceProjectsList(element.projectExperiences)}
