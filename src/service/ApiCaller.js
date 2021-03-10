@@ -24,7 +24,7 @@ export class ApiCaller {
           return response.json();
         })
         .then((data) => data)
-        .catch((e) => alert(e));
+        .catch((e) => console.log(e));
     };
   
     static Get = async (url, user) => {
@@ -48,7 +48,8 @@ export class ApiCaller {
           }
           return response.json();
         })
-        .then((data) => data);
+        .then((data) => data)
+        .catch((e) => console.log(e));
     };
   }
   
