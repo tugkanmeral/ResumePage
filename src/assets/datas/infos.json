@@ -1,7 +1,7 @@
 {
   "ownerInfos": {
     "fullName": "M.Tuğkan Meral",
-    "title": "Yazılım Geliştirme Uzmanı",
+    "title": "yazılım geliştirme uzmanı",
     "company": "Logo Yazılım",
     "companyLink": "https://www.logo.com.tr/",
     "description": "1992 Üsküdar doğumlu, Yıldız Teknik Fizik mezunu, hayvan sever, motosiklet sevdalısı, bir şeyleri yapıp bozmaya sonra tekrar yapmaya bayılan, doğayı anlamaya çalışan, özünde sabit kalıp düşünceleriyle değişen, gelişen, kendi halinde bir insan...",
@@ -14,7 +14,7 @@
   "jobExperiences": [
     {
       "name": "Tim Danışmanlık",
-      "title": "Full Stack Developer",
+      "title": "full stack developer",
       "start": "2018 Aralık",
       "end": "2020 Nisan",
       "projectExperiences" : [
