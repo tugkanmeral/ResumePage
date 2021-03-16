@@ -78,5 +78,11 @@
       "end": "2015",
       "department" : "Applied Physics"
     }
+  ],
+  "knowladge": [
+    {
+      "header": "Asp.NET Core",
+      "text": "Asp.NET Core ile 2.1 versiyonundan itibaren bir çok uygulama geliştirdim. Bazıları çalıştığım yerler için, bir çoğu kendi fikirlerim içindi... Blazor hariç tüm kırınımlarına hakim olmakla birlikte web api'de kendimi rahat hissedebilecek kıvamdayım."
+    }
   ]
 }
